@@ -1,0 +1,95 @@
+/* 全体の基本スタイル */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  color: #444;
+  margin-top: 20px;
+}
+
+/* コンテナスタイル */
+#table-container {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* テーブルの基本スタイル */
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: 60px;
+  height: 50px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ヘッダーと左端のセルを強調 */
+th {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+/* ドロップゾーンのスタイル */
+.drop-zone {
+  background-color: #f8f8f8;
+  transition: background-color 0.3s ease;
+}
+
+.drop-zone.correct {
+  background-color: #d4edda;
+}
+
+.drop-zone.incorrect {
+  background-color: #f8d7da;
+}
+
+/* ドラッグ中のハイライト */
+.drop-zone.highlight {
+  background-color: #cce5ff;
+}
+
+/* 選択肢の記号スタイル */
+#symbols-container {
+  display: flex;
+  justify-content: wrap;
+  flex-wrap: flex-start;
+  margin-top: 20px;
+}
+
+.symbol {
+  background-color: #e3e3e3;
+  border: 1px solid #bbb;
+  padding: 8px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.symbol:nth-child(20n)::after {
+  content: " ";               /* 視覚的に空のコンテンツを挿入 */
+  display: block;            /* ブロック表示で改行を作成 */
+  width: 100%;               /* 改行の幅を100%に設定して行を分割 */
+}
+
+.symbol:hover {
+  background-color: #ccc;
+  transform: scale(1.1);
+}

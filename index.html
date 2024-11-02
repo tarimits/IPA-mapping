@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPA学習アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>IPA学習アプリ</h1>
+  <!-- IPA表のコンテナ -->
+  <div id="table-container">
+    <table id="ipa-table">
+      <thead>
+        <tr>
+          <th></th> <!-- 左上の空白セル -->
+          <th>両唇音</th>
+          <th>唇歯音</th>
+          <th>歯音</th>
+          <th>歯茎音</th>
+          <th>後部歯茎音</th>
+          <th>そり舌音</th>
+          <th>硬口蓋音</th>
+          <th>軟口蓋音</th>
+          <th>口蓋垂音</th>
+          <th>咽頭音</th>
+          <th>声門音</th>
+          <!-- 他の構音点を追加できます -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 各行に構音方法を記載 -->
+        <tr>
+          <th>破裂音</th>
+          <td class="drop-zone" data-zone-id="両唇破裂音"></td>
+          <td class="drop-zone" data-zone-id="唇歯破裂音"></td>
+          <td class="drop-zone" data-zone-id="歯破裂音"></td>
+          <td class="drop-zone" data-zone-id="歯茎破裂音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎破裂音"></td>
+          <td class="drop-zone" data-zone-id="そり舌破裂音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋破裂音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋破裂音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂破裂音"></td>
+          <td class="drop-zone" data-zone-id="咽頭破裂音"></td>
+          <td class="drop-zone" data-zone-id="声門破裂音"></td>
+        </tr>
+        <tr>
+          <th>鼻音</th>
+          <td class="drop-zone" data-zone-id="両唇鼻音"></td>
+          <td class="drop-zone" data-zone-id="唇歯鼻音"></td>
+          <td class="drop-zone" data-zone-id="歯鼻音"></td>
+          <td class="drop-zone" data-zone-id="歯茎鼻音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎鼻音"></td>
+          <td class="drop-zone" data-zone-id="そり舌鼻音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋鼻音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋鼻音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂鼻音"></td>
+          <td class="drop-zone" data-zone-id="咽頭鼻音"></td>
+          <td class="drop-zone" data-zone-id="声門鼻音"></td>
+        </tr>
+        <tr>
+          <th>ふるえ音</th>
+          <td class="drop-zone" data-zone-id="両唇ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="唇歯ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="歯ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="歯茎ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="そり舌ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="咽頭ふるえ音"></td>
+          <td class="drop-zone" data-zone-id="声門ふるえ音"></td>
+        </tr>
+        <tr>
+          <th>弾き音</th>
+          <td class="drop-zone" data-zone-id="両唇弾き音"></td>
+          <td class="drop-zone" data-zone-id="唇歯弾き音"></td>
+          <td class="drop-zone" data-zone-id="歯弾き音"></td>
+          <td class="drop-zone" data-zone-id="歯茎弾き音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎弾き音"></td>
+          <td class="drop-zone" data-zone-id="そり舌弾き音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋弾き音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋弾き音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂弾き音"></td>
+          <td class="drop-zone" data-zone-id="咽頭弾き音"></td>
+          <td class="drop-zone" data-zone-id="声門弾き音"></td>
+        </tr>
+        <tr>
+          <th>摩擦音</th>
+          <td class="drop-zone" data-zone-id="両唇摩擦音"></td>
+          <td class="drop-zone" data-zone-id="唇歯摩擦音"></td>
+          <td class="drop-zone" data-zone-id="歯摩擦音"></td>
+          <td class="drop-zone" data-zone-id="歯茎摩擦音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎摩擦音"></td>
+          <td class="drop-zone" data-zone-id="そり舌摩擦音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋摩擦音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋摩擦音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂摩擦音"></td>
+          <td class="drop-zone" data-zone-id="咽頭摩擦音"></td>
+          <td class="drop-zone" data-zone-id="声門摩擦音"></td> 
+        </tr>
+        <tr>
+          <th>側面摩擦音</th>
+          <td class="drop-zone" data-zone-id="両唇側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="唇歯側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="歯側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="歯茎側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="そり舌側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="咽頭側面摩擦音"></td>
+          <td class="drop-zone" data-zone-id="声門側面摩擦音"></td>
+        </tr>
+        <tr>
+          <th>接近音</th>
+          <td class="drop-zone" data-zone-id="両唇接近音"></td>
+          <td class="drop-zone" data-zone-id="唇歯接近音"></td>
+          <td class="drop-zone" data-zone-id="歯接近音"></td>
+          <td class="drop-zone" data-zone-id="歯茎接近音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎接近音"></td>
+          <td class="drop-zone" data-zone-id="そり舌接近音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋接近音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋接近音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂接近音"></td>
+          <td class="drop-zone" data-zone-id="咽頭接近音"></td>
+          <td class="drop-zone" data-zone-id="声門接近音"></td> 
+        </tr>
+        <tr>
+          <th>側面接近音</th>
+          <td class="drop-zone" data-zone-id="両唇側面接近音"></td>
+          <td class="drop-zone" data-zone-id="唇歯側面接近音"></td>
+          <td class="drop-zone" data-zone-id="歯側面接近音"></td>
+          <td class="drop-zone" data-zone-id="歯茎側面接近音"></td>
+          <td class="drop-zone" data-zone-id="後部歯茎側面接近音"></td>
+          <td class="drop-zone" data-zone-id="そり舌側面接近音"></td>
+          <td class="drop-zone" data-zone-id="硬口蓋側面接近音"></td>
+          <td class="drop-zone" data-zone-id="軟口蓋側面接近音"></td>
+          <td class="drop-zone" data-zone-id="口蓋垂側面接近音"></td>
+          <td class="drop-zone" data-zone-id="咽頭側面接近音"></td>
+          <td class="drop-zone" data-zone-id="声門側面接近音"></td>
+        </tr>
+        <!-- 他の構音方法も追加できます -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 選択肢としてのIPA記号 -->
+  <div id="symbols-container">
+    <div class="symbol" draggable="true" data-symbol="p">p</div>
+    <div class="symbol" draggable="true" data-symbol="b">b</div>
+    <div class="symbol" draggable="true" data-symbol="t">t</div>
+    <div class="symbol" draggable="true" data-symbol="d">d</div>
+    <div class="symbol" draggable="true" data-symbol="ʈ">ʈ</div>
+    <div class="symbol" draggable="true" data-symbol="ɖ">ɖ</div>
+    <div class="symbol" draggable="true" data-symbol="c">c</div>
+    <div class="symbol" draggable="true" data-symbol="ɟ">ɟ</div>
+    <div class="symbol" draggable="true" data-symbol="k">k</div>
+    <div class="symbol" draggable="true" data-symbol="ɡ">ɡ</div>
+    <div class="symbol" draggable="true" data-symbol="q">q</div>
+    <div class="symbol" draggable="true" data-symbol="ɢ">ɢ</div>
+    <div class="symbol" draggable="true" data-symbol="ʔ">ʔ</div>
+    <div class="symbol" draggable="true" data-symbol="m">m</div>
+    <div class="symbol" draggable="true" data-symbol="ɱ">ɱ</div>
+    <div class="symbol" draggable="true" data-symbol="n">n</div>
+    <div class="symbol" draggable="true" data-symbol="ɳ">ɳ</div>
+    <div class="symbol" draggable="true" data-symbol="ɲ">ɲ</div>
+    <div class="symbol" draggable="true" data-symbol="ŋ">ŋ</div>
+    <div class="symbol" draggable="true" data-symbol="ɴ">ɴ</div>
+    <div class="symbol" draggable="true" data-symbol="ʙ">ʙ</div>
+    <div class="symbol" draggable="true" data-symbol="ʀ">ʀ</div>
+    <div class="symbol" draggable="true" data-symbol="ⱱ">ⱱ</div>
+    <div class="symbol" draggable="true" data-symbol="ɾ">ɾ</div>
+    <div class="symbol" draggable="true" data-symbol="ɽ">ɽ</div>
+    <div class="symbol" draggable="true" data-symbol="ɸ">ɸ</div>
+    <div class="symbol" draggable="true" data-symbol="β">β</div>
+    <div class="symbol" draggable="true" data-symbol="f">f</div>
+    <div class="symbol" draggable="true" data-symbol="v">v</div>
+    <div class="symbol" draggable="true" data-symbol="θ">θ</div>
+    <div class="symbol" draggable="true" data-symbol="ð">ð</div>
+    <div class="symbol" draggable="true" data-symbol="s">s</div>
+    <div class="symbol" draggable="true" data-symbol="z">z</div>
+    <div class="symbol" draggable="true" data-symbol="ʃ">ʃ</div>
+    <div class="symbol" draggable="true" data-symbol="ʒ">ʒ</div>
+    <div class="symbol" draggable="true" data-symbol="ʂ">ʂ</div>
+    <div class="symbol" draggable="true" data-symbol="ʐ">ʐ</div>
+    <div class="symbol" draggable="true" data-symbol="ç">ç</div>
+    <div class="symbol" draggable="true" data-symbol="ʝ">ʝ</div>
+    <div class="symbol" draggable="true" data-symbol="x">x</div>
+    <div class="symbol" draggable="true" data-symbol="ɣ">ɣ</div>
+    <div class="symbol" draggable="true" data-symbol="χ">χ</div>
+    <div class="symbol" draggable="true" data-symbol="ʁ">ʁ</div>
+    <div class="symbol" draggable="true" data-symbol="ħ">ħ</div>
+    <div class="symbol" draggable="true" data-symbol="ʕ">ʕ</div>
+    <div class="symbol" draggable="true" data-symbol="h">h</div>
+    <div class="symbol" draggable="true" data-symbol="ɦ">ɦ</div>
+    <div class="symbol" draggable="true" data-symbol="ɬ">ɬ</div>
+    <div class="symbol" draggable="true" data-symbol="ʋ">ʋ</div>
+    <div class="symbol" draggable="true" data-symbol="ɹ">ɹ</div>
+    <div class="symbol" draggable="true" data-symbol="ɻ">ɻ</div>
+    <div class="symbol" draggable="true" data-symbol="j">j</div>
+    <div class="symbol" draggable="true" data-symbol="ɰ">ɰ</div>
+    <div class="symbol" draggable="true" data-symbol="l">l</div>
+    <div class="symbol" draggable="true" data-symbol="ɭ">ɭ</div>
+    <div class="symbol" draggable="true" data-symbol="ʎ">ʎ</div>
+    <div class="symbol" draggable="true" data-symbol="ʟ"></main>ʟ</div>
+    <!-- 他のIPA記号も追加できます -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
