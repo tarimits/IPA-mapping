@@ -68,7 +68,7 @@ th {
 #symbols-container {
   display: flex;
   justify-content: wrap;
-  flex-wrap: flex-start;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
